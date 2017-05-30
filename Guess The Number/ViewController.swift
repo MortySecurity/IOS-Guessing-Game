@@ -23,9 +23,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         guessNumber = Int(arc4random_uniform(100)+1);
         
+    }
+    
+    func dismissKeyboard(){
+        view.endEditing(true);
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +55,7 @@ class ViewController: UIViewController {
             
             if num == guessNumber{
                 guessLabel.text = "You guessed the correct number, (\(guessNumber)), it took you (\(countGuess)) guessses. Play again?";
+                dismissKeyboard();
                 guessAgain = true;
             } else if num! < guessNumber{
                 guessLabel.text = "Your number is less than the mystery number";
