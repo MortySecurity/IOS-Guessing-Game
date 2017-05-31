@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var guessText: UITextField!
     
-    
+  
     @IBOutlet weak var guessLabel: UILabel!
     
     private var guessNumber = 0;
@@ -38,7 +38,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    @IBAction func restartButton(_ sender: Any) {
+       
+        guessNumber = Int(arc4random_uniform(100)+1);
+        
+        
+    }
+    
     @IBAction func guessTheNumber(_ sender: Any) {
         
         if guessAgain{
@@ -58,15 +65,17 @@ class ViewController: UIViewController {
                 dismissKeyboard();
                 guessAgain = true;
             } else if num! < guessNumber{
-                guessLabel.text = "Your number is less than the mystery number";
+                guessLabel.text = "Too small";
+                
             } else if num! > guessNumber{
-                guessLabel.text = "Your number is bigger than the mystery number";
+                guessLabel.text = "Too big";
+                
             }
             
             guessText.text = "";
             
         } else {
-            guessLabel.text = "Please enter a number."
+            guessLabel.text = "Please enter a number. (1-100)"
         }
     }
     

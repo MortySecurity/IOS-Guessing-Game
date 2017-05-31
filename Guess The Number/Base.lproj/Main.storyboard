@@ -28,19 +28,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIv-D6-uqW">
-                                <rect key="frame" x="136" y="155" width="103" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9w-t7-RQL">
+                                <rect key="frame" x="136" y="175" width="103" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Guess">
-                                    <color key="titleColor" red="0.97721275647748662" green="1" blue="0.95776810176219562" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.97721275649999995" green="1" blue="0.95776810180000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="guessTheNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="as2-AC-kau"/>
+                                    <action selector="guessTheNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5V9-lS-MYz"/>
+                                    <action selector="restartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DV4-lA-iGU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess the number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbX-ae-gDJ">
-                                <rect key="frame" x="21" y="193" width="332" height="235"/>
+                                <rect key="frame" x="21" y="214" width="332" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.96847811056012556" green="1" blue="0.95705098306648262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -54,6 +55,17 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.91815090673575128" green="0.36265048376847442" blue="0.27152505758312084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIv-D6-uqW">
+                                <rect key="frame" x="136" y="146" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" red="0.97721275647748662" green="1" blue="0.95776810176219562" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessTheNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="as2-AC-kau"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
